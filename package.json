@@ -1,0 +1,51 @@
+{
+  "name": "ui-unslop-mcp",
+  "version": "1.0.0",
+  "description": "MCP server + agent skill that audits UI design craft and accessibility: WCAG contrast (incl. Tailwind class pairs), a11y failures, design-token sprawl and generated-UI tells. Works with Claude Code, Claude Desktop, Codex and Antigravity.",
+  "type": "module",
+  "bin": {
+    "ui-unslop-mcp": "src/server.mjs"
+  },
+  "files": [
+    "src",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "skill",
+    "anti-slop",
+    "ui",
+    "design",
+    "accessibility",
+    "a11y",
+    "wcag",
+    "contrast",
+    "tailwind",
+    "design-tokens",
+    "claude",
+    "codex",
+    "antigravity"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "unslop-core": "^1.0.0"
+  },
+  "author": "Fikri Firman Fadilah",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fikrifirmanf/ui-unslop-mcp.git"
+  },
+  "homepage": "https://github.com/fikrifirmanf/ui-unslop-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/fikrifirmanf/ui-unslop-mcp/issues"
+  }
+}
