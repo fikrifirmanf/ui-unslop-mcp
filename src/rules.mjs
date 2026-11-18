@@ -139,6 +139,14 @@ export const rules = [
     examples: [{ file: "a.tsx", bad: ['<div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-xl">'], good: ['<div className="rounded-lg border bg-card">'] }],
   },
   {
+    id: "FAINT_TEXT_ON_FILL",
+    severity: "WARN",
+    files: MARKUP,
+    regex: /\btext-(?:white|black)\/(?:[1-7]\d?|\[0?\.[1-7]\d*\])(?![\d/])|\btext-(?:white|black)\b[^"'`]*\bopacity-(?:[1-7]\d?)\b/,
+    message: "Low-opacity white/black text on a coloured fill is faint and usually fails AA. Hand-pick a same-hue tone that passes 4.5:1, or use dark text on a light tint.",
+    examples: [{ file: "a.tsx", bad: ['<p className="bg-indigo-600 text-white/60">', '<p className="bg-emerald-700 text-white/[0.7]">'], good: ['<p className="bg-indigo-700 text-indigo-100">', '<p className="bg-white text-gray-600">', '<p className="text-white/90">'] }],
+  },
+  {
     id: "TRANSITION_ALL",
     severity: "WARN",
     regex: /\btransition-all\b|transition\s*:\s*all\b/,
