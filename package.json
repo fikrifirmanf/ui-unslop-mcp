@@ -1,6 +1,6 @@
 {
   "name": "ui-unslop-mcp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "MCP server + agent skill that audits UI design craft and accessibility: WCAG contrast (incl. Tailwind class pairs), a11y failures, design-token sprawl and generated-UI tells. Works with Claude Code, Claude Desktop, Codex and Antigravity.",
   "type": "module",
   "bin": {
